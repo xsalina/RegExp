@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const hd = '<span>jshdajsyfhkfskha</span>'
+        console.log(hd.match(/<span>[\s\S]+<\/span>/))//s是空格，S是除空格意外的  一定要+ 号
+        console.log(hd.match(/<span>[\d\D]+<\/span>/))//d是数字 D是除数字意外的 一定要+ 号
+    </script>
+</body>
+</html>

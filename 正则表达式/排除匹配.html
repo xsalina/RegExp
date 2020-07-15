@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const hd = 'khxfshGmhxyp';
+        const reg = /[^xy]+/gi;//   除了x y以外的我都要
+        console.log(hd.match(reg))//["kh", "fshGmh", "p"]
+
+
+        const str ='张三:021-8348548,李四:031-234894323';
+
+        const reg1 = /[^:\d\-,]+/g //除了 : 数字 - , 我都要。也就是名字["张三", "李四"]
+        console.log(str.match(reg1))
+    </script>
+</body>
+</html>

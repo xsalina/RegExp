@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const strNumber = '2010';
+        const reg = /[0-9]+/;//匹配0-9的数字多个
+        console.log(strNumber.match(reg))//["2010", index: 0, input: "2010", groups: undefined]
+
+
+
+
+        const mixStr = 'fdsjhfFsjhsak';
+        const reg1 = /[a-z]+/i;//匹配a-z之间的多个字母 不区分大小写
+        const reg2 = /[a-z]/gi//匹配a-z之间的字母 不区分大小写
+        console.log(mixStr.match(reg1))//["fdsjhfFsjhsak", index: 0, input: "fdsjhfFsjhsak", groups: undefined]
+        console.log(mixStr.match(reg2))//["f", "d", "s", "j", "h", "f", "F", "s", "j", "h", "s", "a", "k"]
+    </script>
+</body>
+</html>
