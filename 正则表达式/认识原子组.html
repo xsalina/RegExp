@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hd = `
+        <h1>
+            hsdjjds
+            </h1>
+        <h2>kkkkkk</h2>`;
+        // [\s\S] 或[\d\D]全部内容 s是空格 S是非空格  *代表0个或者多个
+
+        // 一个括号代表一个原子组 （h[1-6]）代表第一个原子组 可以用\1来表示
+        let reg = /<(h[1-6])>[\s\S]*<\/\1>/gi;
+        console.dir(hd.match(reg))
+    </script>
+</body>
+</html>

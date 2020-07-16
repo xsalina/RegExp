@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name='email' value = '2521-76127@qq.com' />
+    <span class='text'></span>
+    <script>
+        const span = document.querySelector('.text')
+        const emailValue = document.querySelector(`[name='email']`).value;
+        //^ 开始 [\w-]=>[]满足任何一个都可以  w数字或者字母 -符号  +是多个的意思 @就是@  要转义 （com|org|cn）=> | com或者org或者cn结尾都可以
+        // const reg = /^([\w-])+@[\w-]+\.(com|org|cn)$/;
+
+
+
+        //但是新浪的邮箱可以是这样.com.cn   2521-76127@qq.com.cn
+        // 所以我们要加一个([\w-]+\.) =>字母和点.      ([\w-]+\.)+ => 字母和点.的原子组  一个或者多个都可以
+        const reg = /^([\w-])+@([\w-]+\.)+(com|org|cn)$/;
+        span.innerHTML = emailValue.match(reg)?'正确':'错误'
+        console.log(emailValue.match(reg))
+    </script>
+</body>
+</html>
